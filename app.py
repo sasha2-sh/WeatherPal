@@ -13,7 +13,7 @@ def clear():
 
 
 
-def fetch_respose():
+def fetch_response():
   location_url = "https://geocoding-api.open-meteo.com/v1/search"
   while True:
     clear()
@@ -40,7 +40,7 @@ def fetch_respose():
       print('Please enter a city name.')
 
 def get_variables():
-  current = fetch_respose()
+  current = fetch_response()
 
   temperature = current["temperature_2m"]
   apparent_temp = current["apparent_temperature"]
