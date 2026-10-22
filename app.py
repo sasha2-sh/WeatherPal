@@ -11,8 +11,6 @@ import time
 def clear():
   os.system('clear')
 
-
-
 def fetch_response():
   location_url = "https://geocoding-api.open-meteo.com/v1/search"
   while True:
@@ -40,7 +38,7 @@ def fetch_response():
       print('Please enter a city name.')
 
 def get_variables():
-  current = fetch_response()
+  current = fetch_response()['current']
 
   temperature = current["temperature_2m"]
   apparent_temp = current["apparent_temperature"]
@@ -57,4 +55,3 @@ def get_variables():
   return temperature,apparent_temp,weather_code,is_day,cloud_cover,humidity,precipitation,wind_speed,wind_direction,wind_gusts,pressure
 
 
-fetch_respose()
